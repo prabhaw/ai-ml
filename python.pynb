@@ -4,7 +4,7 @@
   "metadata": {
     "colab": {
       "provenance": [],
-      "authorship_tag": "ABX9TyOlV2SbZcZzR2rg9ztzlr1V",
+      "authorship_tag": "ABX9TyNUyccrFsVhUlGRJlHM+Mtp",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -27,28 +27,932 @@
       ]
     },
     {
-      "cell_type": "code",
-      "execution_count": null,
+      "cell_type": "markdown",
+      "source": [
+        "What is Python: History features and the different  between Python 2 and python 3.\n",
+        "\n",
+        "---> Python is a high-lvel, interpreted and general purpose programming language know for its emphasis on code readability and clear syntax. Created by Guido va ROssum and first released in 1991, its desigh philosophy emphasizes code readability with the use of significant indentation.\n",
+        "\n",
+        "## Brif History of python\n",
+        "\n",
+        "*   The Beginning (Late 1980s) :  Guido van rossum began working on Python in December  1989 at Centrum Wiskunde and Informatica (CWI) in the Netherlands and a succesor to the ABC programming language.\n",
+        "*   Interpreterd Language : Code is executed line by line , which is simplifier dubugging\n",
+        "*  Dynamically Types: You don't need to explicitly declare the data type of a variable. Python determines it at runtime.\n",
+        "* Extensive Standard libraty: it comes with a massive collections of modules and package\n",
+        "* Corss-Platform : Python run seamlessly on windown, macos , linux and unix all.\n",
+        "\n",
+        "\n"
+      ],
       "metadata": {
-        "id": "7Y_XTlYOvnCA"
-      },
-      "outputs": [],
-      "source": []
+        "id": "6_0hiLtE1svs"
+      }
     },
     {
       "cell_type": "markdown",
       "source": [
-        "What is pyton:\n"
+        "\n",
+        "\n",
+        "Variables : Rules of identifiers , assiging values and dynamic typing\n",
+        "\n",
+        "\n"
       ],
       "metadata": {
-        "id": "t7_3bCaz1BsC"
+        "id": "TgkIznht4_uz"
       }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 1. Rules for Python Identifiers\n",
+        "An identifier is a name userd to identify a variable, function  and class , moules or other object. TO avoid syntax error , you  must  follow these rules when naming variables in python.\n",
+        "\n",
+        "\n",
+        "* Allow Characters: Must start with a letter (A-Z, a-z) or an underscore (_), followed by letters, digits(0-9) or underscores.\n",
+        "* No Number at the Start: A variable name cannot begin with a number ( eg. 1st_variable is invalid; variable_1 is valid)\n",
+        "* Case Sensitive : Python is case-sensitive , meaning age, Age and AGE are three completely different variables.\n",
+        "* No Special Characters: Symbols like @, $, and  % are not allowed.\n",
+        "* Reserved Keywords: You cannot use Python's build-in keywords ( such as if , else, while, calss, def, import ) as variable names."
+      ],
+      "metadata": {
+        "id": "ewBe-Ge75Umo"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "## Assigning Value to Variables\n",
+        "## Python uses the equal sign (=) as the assignment operator to bind a value to a variable name.\n",
+        "x=10\n",
+        "name = \"PRabhaw\"\n",
+        "\n",
+        "print(x , name)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "OY9ErKrZ9plI",
+        "outputId": "af1856a2-881e-436d-cd19-fc7476bbc724"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "10 PRabhaw\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "## Multiple Assignment\n",
+        "x, y, z = 1, 2, 3\n",
+        "print(x, y, z)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "50R-_mce-Avk",
+        "outputId": "f3f6a922-d515-4fe0-8668-9b0a9d45913e"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1 2 3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "## Chain Assigment\n",
+        "x = y = z = 10\n",
+        "print(x, y, z)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9n8LzHyv-MDP",
+        "outputId": "c2deee2f-5bd5-4d7b-8f03-e3fbd92d9033"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "10 10 10\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Dynamic Typing\n",
+        "Python is a dynamically typed language. This means you don not need to explicitly declare the data type of a variable when you create it.\n",
+        "\n",
+        "\n",
+        "\n",
+        "*  Hot it work : Under the hood, a Python variable is simply a reference ( or label ) pointing to an object stored in memory. The data type belongs tho the object. not the variable name.\n",
+        "*   Rassignment: Because of dynamic typping , you can easily change the type of data a variable holds during program execution.\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "GU3TCm_05Uce"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = 10\n",
+        "print(type(x))\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nmrMCISd-Vxp",
+        "outputId": "95e0645d-e4c1-438d-9251-5d6049a356c2"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'int'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x= \"hello\"\n",
+        "print(type(x))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8NcYcnky_Cqs",
+        "outputId": "2b1ded48-5c13-4c8f-b18c-d81f1234c190"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'str'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Basic Data type\n",
+        "Every value in python has as specific data ytype. Knowing your data type help you understand what kid of operation you can perform on a piece of data.\n",
+        "\n",
+        "## 1 . Integers (int )\n",
+        "Integers represend whole number - positive, neagtive, or zero - without any decimal or fractional part. Python integers have nulimited precision ( their size is only limited by your system's available memory)\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "ot--J8NS_RSn"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "age = 25\n",
+        "temperature = -5\n",
+        "population = 10000000"
+      ],
+      "metadata": {
+        "id": "OsbH6mtb_Lb5"
+      },
+      "execution_count": 11,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "## Operator : You can perform standard arthemetic operations like addition (+),\n",
+        "## subtraction (-)"
+      ],
+      "metadata": {
+        "id": "HZR5mYLpAh9B"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 2. Float (float)\n",
+        "Float (floating point numbers) represent real numbers that contain a decimal point or area writtten in scientific notation.\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "td7oCivfAxYs"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "pi = 3.14159\n",
+        "height = 5.9\n",
+        "scientific_notion = 1.5e2\n",
+        "\n",
+        "print(pi, height, scientific_notion)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dD2vJW9SBKJS",
+        "outputId": "4adb7fcf-2079-416c-d197-fa24e5f494b0"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "3.14159 5.9 150.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 3. String (str)\n",
+        "String are sequences of characters used to represent text. In python string are enclosed in single quotes ('') on double quots (\"). THey behave identically, but using matching quotes allows you to include to opposite quote insid the string without escaping it ."
+      ],
+      "metadata": {
+        "id": "mA7-cALeBSZp"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "name = \"Alice\"\n",
+        "message = 'Hello, world!'\n",
+        "print(name, message)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_AoBd_UqBPJv",
+        "outputId": "7644aaa5-a991-43f4-bb19-3b3bb93540f5"
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Alice Hello, world!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 4. Booleans(bool)\n",
+        "Booleans represent true value , drived by boolean algebra. A boolean has only two possible value True or False (note the capital T and F )\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "F-08RvN4CKPx"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "is_active = True\n",
+        "is_logged_in= False\n",
+        "print(is_active, is_logged_in)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "MMjj9_fACDl0",
+        "outputId": "375318b0-6035-469f-e3d3-be65fe84a247"
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "True False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "## Usage: They are most commonly the result of comparison operations or lgoical checks:"
+      ],
+      "metadata": {
+        "id": "tyQ46nCpCiNL"
+      },
+      "execution_count": 16,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(10>9)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "g2lbw-EgDXLv",
+        "outputId": "a05691a5-d10d-4944-f3c5-21817eaf1ac3"
+      },
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print (5==2)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "c_ZTafbUDZRf",
+        "outputId": "a795093f-2894-4855-bf32-7d8b675be34d"
+      },
+      "execution_count": 18,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "## Checking the variables type"
+      ],
+      "metadata": {
+        "id": "n8EYZlNmDbw_"
+      },
+      "execution_count": 19,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "## You can always chek the data type of any variable using python build in\n",
+        "## type() fucntion"
+      ],
+      "metadata": {
+        "id": "4KFCnF40DgxW"
+      },
+      "execution_count": 20,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = 42\n",
+        "print(type(x))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "LsNIx3RvDnfA",
+        "outputId": "1aacb110-d5c6-48b3-f7f7-158673d23b2c"
+      },
+      "execution_count": 21,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'int'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Typecasting ( also know as type conversion ) is the process of converting a variable or value from one data type to another. Pyton support two types of typecasting : Implicit and Explicit."
+      ],
+      "metadata": {
+        "id": "jyB8Yzw4Jou2"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "## 1. Implicit Typecasting (Automatic)\n",
+        "\"\"\"\n",
+        "In implicit type, Python automatically convert one data type to another without any\n",
+        "user intervention. THis usaually happends when mixing data type in an operation to prevent data\n",
+        "loss.\n",
+        "\n",
+        "\"\"\""
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 71
+        },
+        "id": "6e-BUwEIDqaA",
+        "outputId": "9e01eafa-605d-4277-ab61-5ef43c43cc2a"
+      },
+      "execution_count": 25,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "' \\nIn implicit type, Python automatically convert one data type to another without any\\nuser intervention. THis usaually happends when mixing data type in an operation to prevent data\\n\\n\\n'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 25
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "## How it works: Python automatically upgrade a lower data type\n",
+        "##like an integer to a higher data type (like a float) during mapt operations."
+      ],
+      "metadata": {
+        "id": "kiuyB0XVKIcl"
+      },
+      "execution_count": 26,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num_int= 10\n",
+        "num_float = 5.5\n",
+        "\n",
+        "\n",
+        "print(num_int + num_float)\n",
+        "print(type(num_int + num_float))\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DnLwHUOrKsjA",
+        "outputId": "d17b6fbe-4fd0-49ad-e6ef-91709d182df8"
+      },
+      "execution_count": 27,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "15.5\n",
+            "<class 'float'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 2. Explicit typecasting (Manual)\n",
+        "In pxplicit typecasting, the programmer manually converts a data type using Python's build-in conversion functions. THis is also known as type coercion."
+      ],
+      "metadata": {
+        "id": "NPHUlX2MK9hw"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# the primay build itn fucntions:"
+      ],
+      "metadata": {
+        "id": "dZmcaRdyLRNV"
+      },
+      "execution_count": 28,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = 10.5\n",
+        "print(int(x))\n",
+        "print(float(x))\n",
+        "print(str(x))\n",
+        "print(bool(x))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dAdGy87fLO6R",
+        "outputId": "464aa9d2-28b5-414b-d359-5153e01c65ae"
+      },
+      "execution_count": 29,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "10\n",
+            "10.5\n",
+            "10.5\n",
+            "True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 1. Arithmetic & Assignment Operators\n",
+        "Arithmetic Operators: Used for standard math (+, -, *, /, //, %, **). For example, 10 % 3 gives the remainder 1.\n",
+        "\n",
+        "Assignment Operators: Used to assign values to variables, often combined with an arithmetic operation (shorthand notation):\n",
+        "\n",
+        "= (Assign): x = 5\n",
+        "\n",
+        "+= (Add and assign): x += 3 (equivalent to x = x + 3)\n",
+        "\n",
+        "-= (Subtract and assign): x -= 2\n",
+        "\n",
+        "*= (Multiply and assign): x *= 4"
+      ],
+      "metadata": {
+        "id": "hpc1QDuGQ7Ab"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 2. Comparison & Logical Operators\n",
+        "Comparison Operators: Compare two values and return a Boolean (==, !=, >, <, >=, <=). Example: 5 < 10 evaluates to True.\n",
+        "\n",
+        "Logical Operators: Combine conditional statements (and, or, not).\n",
+        "\n",
+        "and: Returns True if both conditions are true.\n",
+        "\n",
+        "or: Returns True if at least one condition is true.\n",
+        "\n",
+        "not: Reverses the Boolean outcome."
+      ],
+      "metadata": {
+        "id": "CL4ya6orQ_dT"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 3. Identity Operators (is, is not)\n",
+        "Identity operators compare the memory locations of two objects, not just their values. (This is different from ==, which checks if the values are equal).\n",
+        "\n",
+        "is: Returns True if both variables point to the exact same object in memory.\n",
+        "\n",
+        "\n",
+        "is not: Returns True if they do not point to the same object."
+      ],
+      "metadata": {
+        "id": "kmdEeu7zRHJV"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "x = [1, 2, 3]\n",
+        "y = [1, 2, 3]\n",
+        "print(x == y)  # True (values are equal)\n",
+        "print(x is y)  # False (different objects in memory)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "SYCDhvbFRKCK",
+        "outputId": "d9b43f3b-0215-4a99-cf19-c99b8ba75519"
+      },
+      "execution_count": 31,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "True\n",
+            "False\n"
+          ]
+        }
+      ]
     },
     {
       "cell_type": "code",
       "source": [],
       "metadata": {
-        "id": "dAxLDrp51D24"
+        "id": "dNFXupovRLkC"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 4. Membership Operators (in, not in)\n",
+        "Membership operators are used to test if a value is present within a sequence (like strings, lists, tuples, or dictionaries).\n"
+      ],
+      "metadata": {
+        "id": "PQAlrY4ARSPG"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "## in: Returns True if the specified value is found in the sequence.\n",
+        "fruits = [\"apple\", \"banana\", \"cherry\"]\n",
+        "print(\"banana\" in fruits)  # Output: True"
+      ],
+      "metadata": {
+        "id": "eJF07XMlRUuN"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "## not in: Returns True if the specified value is not found in the sequence."
+      ],
+      "metadata": {
+        "id": "Dy_59VG-RbRe"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"grape\" not in fruits)"
+      ],
+      "metadata": {
+        "id": "EvU6i7N7ReXp"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 5. Bitwise Operators\n",
+        "Bitwise operators act on operands as if they were strings of binary digits (0s and 1s). They operate bit by bit:"
+      ],
+      "metadata": {
+        "id": "AEEBosOjRjnU"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(5&3)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "agnq8Jj8RqdV",
+        "outputId": "ef57210d-fbf7-4003-adb0-f3d6421e9533"
+      },
+      "execution_count": 32,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(5 | 3)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "icXrEuX4TYwT",
+        "outputId": "6f0bd119-8407-4ea1-8717-5e7976dfb8a6"
+      },
+      "execution_count": 33,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "7\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(5 ^ 3)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "TaGfWVSGTcpV",
+        "outputId": "4ee4d829-4347-4544-f73c-d72d7ccb2451"
+      },
+      "execution_count": 34,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "6\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(~5)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Axi-nNz3TfD3",
+        "outputId": "d356e476-a6ef-4f71-e2a5-7bbbeafcf1a2"
+      },
+      "execution_count": 36,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "-6\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(5<<1)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "iRWHSlEGTi7S",
+        "outputId": "1093811f-9dd2-4adc-b9d4-bc8c34c87a66"
+      },
+      "execution_count": 37,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "10\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(5>>1)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "FZFAxgfPT1vQ",
+        "outputId": "16166ae5-6f17-4d10-9997-6b11052e18ff"
+      },
+      "execution_count": 38,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def summarize(*ags, **kgs):\n",
+        "    print(\"Position of Args\", ags)\n",
+        "    print(\"Keyword of Args\", kgs)\n",
+        "\n",
+        "\n",
+        "\n",
+        "summarize(\"hello\", 'how', name=\"prabhaw\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "BPpsB_C-T3s7",
+        "outputId": "8d218cc4-788c-4e14-ec69-90fc0d2a8c73"
+      },
+      "execution_count": 42,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Position of Args ('hello', 'how')\n",
+            "Keyword of Args {'name': 'prabhaw'}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 108
+        },
+        "id": "RuGy3eWUkgNU",
+        "outputId": "e73d9da6-d347-4497-d2aa-0e4723bc1267"
+      },
+      "execution_count": 44,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "SyntaxError",
+          "evalue": "invalid syntax (3062697367.py, line 2)",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"/tmp/ipykernel_3429/3062697367.py\"\u001b[0;36m, line \u001b[0;32m2\u001b[0m\n\u001b[0;31m    print({*my_disc, 'hello':\"hi\"})\u001b[0m\n\u001b[0m                            ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "eaI_yVZolP7c"
       },
       "execution_count": null,
       "outputs": []
